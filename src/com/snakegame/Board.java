@@ -85,12 +85,13 @@ public class Board extends JPanel implements ActionListener {
 
     public void locateApple() {
 
-         int r = (int) (Math.random() * RANDOM_POSITION); // 0 and 1 = 0.1 0.5 0.32 //double
-         apple_x = (r * DOT_SIZE); // 29*10=290 Frame is of (300,300) Position of apple will be from 1 - 290
+        int r = (int) (Math.random() * RANDOM_POSITION); // 0 and 1 = 0.1 0.5 0.32 //double
+        apple_x = (r * DOT_SIZE); // 29*10=290 Frame is of (300,300) Position of apple will be from 1 - 290
 
-         r = (int) (Math.random() * RANDOM_POSITION);
-         apple_y = (r * DOT_SIZE);
-        //apple_x =(int) (Math.random(0 + apple.getWidth(null) / 2,Snake.DEFAULT_WIDTH - apple.getWidth(null) / 2));
+        r = (int) (Math.random() * RANDOM_POSITION);
+        apple_y = (r * DOT_SIZE);
+        // apple_x =(int) (Math.random(0 + apple.getWidth(null) / 2,Snake.DEFAULT_WIDTH
+        // - apple.getWidth(null) / 2));
 
     }
 
@@ -130,7 +131,7 @@ public class Board extends JPanel implements ActionListener {
         FontMetrics metrics = getFontMetrics(font);
         g.setColor(Color.WHITE);
         g.setFont(font);
-        g.drawString(msg, (Snake.DEFAULT_WIDTH - metrics.stringWidth(msg)) / 2, Snake.DEFAULT_HEIGHT / 2);
+        g.drawString(msg, (Game.DEFAULT_WIDTH - metrics.stringWidth(msg)) / 2, Game.DEFAULT_HEIGHT / 2);
     }
 
     public void checkCollision() {
@@ -139,10 +140,10 @@ public class Board extends JPanel implements ActionListener {
                 inGame = false;
             }
 
-            if (y[0] >= Snake.DEFAULT_WIDTH) {
+            if (y[0] >= Game.DEFAULT_WIDTH) {
                 inGame = false;
             }
-            if (x[0] >= Snake.DEFAULT_HEIGHT) {
+            if (x[0] >= Game.DEFAULT_HEIGHT) {
                 inGame = false;
             }
             if (y[0] < 0) {

@@ -2,7 +2,7 @@ package com.snakegame;
 
 import javax.swing.*;
 
-public class Snake extends JFrame {
+public class Game extends JFrame {
 
     /**
      *
@@ -10,7 +10,7 @@ public class Snake extends JFrame {
     private static final long serialVersionUID = 2504130082787173701L;
     static int DEFAULT_WIDTH, DEFAULT_HEIGHT;
 
-    Snake() {
+    Game() {
         super("Snake Game");
         DEFAULT_HEIGHT = 500;
         DEFAULT_WIDTH = 500;
@@ -25,6 +25,6 @@ public class Snake extends JFrame {
     }
 
     public static void main(String[] args) {
-        new Snake().setVisible(true);
+        new Game().setVisible(true);
     }
 }
